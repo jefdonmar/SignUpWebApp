@@ -17,15 +17,17 @@
   }  ;
 
   let textSelect = function(obj){
+    let optionsBlock = '';
+
+    obj.options.forEach(function(option) {
+      optionsBlock += `<option value ="${ option.value }" label ="${ option.label }"></option>`;
+    });
+
     let templateSelect =`
     <div class="text-select">
       <select type = "${ obj.type }" placeholder = "${ obj.label }" id = "${ obj.id }">
-        <option value ="">Select Language...</option>
-        <option value ="${ obj.options[0].value }" label ="${ obj.options[0].label }"></option>
-        <option value ="${ obj.options[1].value }" label ="${ obj.options[1].label }"></option>
-        <option value ="${ obj.options[2].value }" label ="${ obj.options[2].label }"></option>
-        <option value ="${ obj.options[3].value }" label ="${ obj.options[3].label }"></option>
-        <option value ="${ obj.options[4].value }" label ="${ obj.options[4].label }"></option>
+      <option value ="">Select Language...</option>
+        ${optionsBlock}
       </select>
     </div>
     `;
