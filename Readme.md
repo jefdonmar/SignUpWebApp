@@ -1,4 +1,4 @@
-In this repository, this was my first experience with doing paired programming to make a simple sign-up web app.
+In this repository, this was our first experience with doing paired programming to make a simple sign-up web app.
 
 In this project, we used HTML, CS and JS
 
